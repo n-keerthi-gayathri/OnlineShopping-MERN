@@ -12,11 +12,11 @@ const { log } = require("console");
 
 app.use(express.json());
 app.use(cors(
-    {
-        origin: ["https://online-shopping-mern.vercel.app/"],
-        methods: ["POST","GET"],
-        credentials: true
-    }
+    // {
+    //     origin: ["https://online-shopping-mern.vercel.app/"],
+    //     methods: ["POST","GET"],
+    //     credentials: true
+    // }
 ));
 
 // Database Connection with MongoDB
