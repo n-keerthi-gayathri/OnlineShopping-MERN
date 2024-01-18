@@ -11,7 +11,13 @@ const { type } = require("os");
 const { log } = require("console");
 
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+    {
+        origin: ["https://online-shopping-mern.vercel.app/"],
+        methods: ["POST","GET"],
+        credentials: true
+    }
+));
 
 // Database Connection with MongoDB
 mongoose.connect("mongodb+srv://keerthigayathrinissankararao40:KeerthiGN@cluster0.iozokqr.mongodb.net/e-commerce");
