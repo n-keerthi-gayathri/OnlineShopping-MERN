@@ -53,7 +53,7 @@ app.use('/images',express.static('upload/images'))
 app.post("/upload",upload.single('product'),(req,res)=>{
     res.json({
         success:1,
-        image_url:`http://0.0.0.0:${port}/images/${req.file.filename}`
+        image_url:`http://localhost:${port}/images/${req.file.filename}`
     })
 })
 
@@ -276,7 +276,7 @@ app.post('/getcart',fetchUser,async (req,res)=>{
     res.json(userData.cartData);
 })
 
-app.listen(port,'0.0.0.0',(error) =>{
+app.listen(port,(error) =>{
     if(!error) {
         console.log("Server Running on Port "+port);
     }
