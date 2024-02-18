@@ -39,7 +39,8 @@ app.get("/",(req,res)=>{
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     // Specify a writable directory path
-    cb(null, '/tmp/uploads');
+    //cb(null, '/tmp/uploads');
+      cb(null, 'upload/images');
   },
   filename: function (req, file, cb) {
     cb(null, file.originalname);
