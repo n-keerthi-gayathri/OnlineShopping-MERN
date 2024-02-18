@@ -53,7 +53,7 @@ app.use('/images',express.static('upload/images'))
 app.post("/upload",upload.single('product'),(req,res)=>{
     res.json({
         success:1,
-        image_url:`https://online-shopping-mern.vercel.app/`
+        image_url:`https://online-shopping-mern-1ikk.vercel.app/images/${req.file.filename}`
     })
 })
 
